@@ -1,1 +1,125 @@
+/*
+Author: Amandine ARIAS;
+Project: Ohmyfood!;
+Type: website;
+Description: mockup integration;
+First version: 02/02/2021;
+Tags: web, gastronomic restaurant, order online, no wait;
+*/
 
+/* GENERAL */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* BODY */
+body {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1000px;
+  margin: 25px auto;
+}
+
+body a,
+body a:visited {
+  text-decoration: none;
+  text-align: center;
+}
+
+body li {
+  list-style: none;
+  display: inline-block;
+}
+
+body li a, body li a:visited {
+  text-decoration: none;
+  text-align: center;
+}
+
+
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 500;
+}
+
+/* HEADER */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.navLinks li {
+    margin: 0 15px;
+    color: #FF6060;
+}
+
+.logo {
+    width: 100px;
+}
+
+.banner {
+  position: relative;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  height: 125px;
+  z-index: 1;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  font-weight: 500;
+  font-size: xx-large;
+  color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: 125px;
+    border-radius: 15px;
+    object-fit: cover;
+    filter: brightness(75%);
+}
+
+/* LANDING */
+.landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: lightgrey;
+  /* background: #F6F6F6; */
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  background-color: black;
+}
+
+.footer img {
+  width: 75px;
+  padding: 1.5em 0 0.5em;
+}
+
+.footer p {
+  width: 100%;
+  color: white;
+  font-size: xx-small;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
