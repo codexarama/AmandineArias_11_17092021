@@ -9,8 +9,8 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <img className="logoWhite"  src={logoWhite} alt="logo"></img>
-        <p>© 2020 Kasa. All rights reserved</p>
+        <img className="footerLogo"  src={logoWhite} alt="logo"></img>
+        <p className="footerContent">© 2020 Kasa. All rights reserved</p>
       </footer>
     );
   }

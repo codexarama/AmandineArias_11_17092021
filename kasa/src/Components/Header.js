@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from '../Images/logo.svg';
-import banner from '../Images/banner.jpg';
+import Background from '../Images/headerBanner.jpg';
+
+// FONCTIONNE MAIS N'AFFICHE RIEN
+// const bannerBackground = {
+//   width: "100%",
+//   height: "150px",
+//   backgroundImage: `url(${Background})`
+// }
 
 /**
  * [Header description]
@@ -12,17 +19,25 @@ class Header extends React.Component {
       <header>
         <nav>
           <img className="logo" src={logo} alt="logo"></img>
-          <ul className="navLinks">
+          <ul className="nav-links">
             <li>Accueil</li>
             <li>A Propos</li>
           </ul>
         </nav>
-        <div className="banner">
-          <div className="title">
-            <h1>Chez vous, partout et ailleurs</h1>
-          </div>
-          <img src={banner} alt="banner"></img>
-        </div>
+
+        {/* FONCTIONNE MAIS N'AFFICHE RIEN */}
+        {/* <div style={Background}></div> */}
+
+        {/* NE FONCTIONNE PAS */}
+        {/* <div style={{ backgroundImage: `url(require("../Images/headerBanner.jpg"))` }}></div> */}
+
+        {/* NE FONCTIONNE PAS */}
+        {/* <bg-image className="banner"></bg-image> */}
+
+        <section className="banner">
+          <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+          <img className="banner-background"src={Background} alt="landscape"></img>
+        </section>
       </header>
     );
   }
@@ -38,12 +53,10 @@ class Header extends React.Component {
 //           <li>A Propos</li>
 //         </ul>
 //       </nav>
-//       <div className="banner">
-//         <div className="title">
-//           <h1>Chez vous, partout et ailleurs</h1>
-//         </div>
-//         <img src={banner} alt="banner"></img>
-//       </div>
+//       <section className="banner">
+//         <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+//         <img className="banner-background"src={Background} alt="landscape"></img>
+//       </section>
 //     </header>
 //   );
 // };

@@ -17,13 +17,13 @@ class Landing extends React.Component {
 }
 
 // const Footer = () => {
-//   return (
-//     <footer>
-//       <div className="footer">
-//         <p>Chez vous, partout et ailleurs</p>
-//       </div>
-//     </footer>
-//   );
+  // return (
+  //   <main className="landing">
+  //     <div>1</div>
+  //     <div>2</div>
+  //     <div>3</div>
+  //   </main>
+  // );
 // };
 
 export default Landing;
