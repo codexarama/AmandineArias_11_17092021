@@ -16,7 +16,8 @@ class Landing extends React.Component {
   }
 }
 
-// const Footer = () => {
+// STATELESS COMPONENT (FONCTION)
+// const Landing = () => {
   // return (
   //   <main className="landing">
   //     <div>1</div>

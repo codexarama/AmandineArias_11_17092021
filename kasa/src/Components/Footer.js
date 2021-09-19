@@ -9,20 +9,19 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <img className="footerLogo"  src={logoWhite} alt="logo"></img>
-        <p className="footerContent">© 2020 Kasa. All rights reserved</p>
+        <img className="footer-logo"  src={logoWhite} alt="logo"></img>
+        <p className="footer-content">© 2020 Kasa. All rights reserved</p>
       </footer>
     );
   }
 }
 
+// STATELESS COMPONENT (FONCTION)
 // const Footer = () => {
 //   return (
-//     <footer>
-//       <div className="footer">
-//         <img src={logoWhite} alt="logo"></img>
-//         <p>Chez vous, partout et ailleurs</p>
-//       </div>
+//     <footer className="footer">
+//         <img className="footer-logo" src={logoWhite} alt="logo"></img>
+//         <p className="footer-content">Chez vous, partout et ailleurs</p>
 //     </footer>
 //   );
 // };
