@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Erreur404 from './Erreur';
-import Footer from './Footer';
+import Erreur404 from '../Components/Error';
+import Footer from '../Components/Footer';
 
 class Erreur extends React.Component {
   render() {

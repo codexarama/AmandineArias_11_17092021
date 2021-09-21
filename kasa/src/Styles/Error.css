@@ -1,0 +1,26 @@
+.error {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 85vh;
+    color: #ff6060;
+    text-align: center;
+  }
+
+  .error-content {
+    width: 100%;
+  }
+
+  .error-number {
+    font-size: 10em;
+    font-weight: 800;
+  }
+
+  .error-message {
+    font-size: x-large;
+  }
+
+  .error-back {
+    width: 100%;
+    font-size: x-small;
+  }

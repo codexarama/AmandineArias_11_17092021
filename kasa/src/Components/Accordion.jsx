@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
-// HELP FORCOMPONENT ERROR
-// https://reactjs.org/docs/lists-and-keys.html#keys
-
-// try to fix error => ADDED : key=id
+import '../Styles/Accordion.css'
 
 const Accordion = ({ id, title, content }) => {
   const [isActive, setIsActive] = useState(false);
@@ -29,7 +25,6 @@ const Accordion = ({ id, title, content }) => {
           {content}
         </p>
       )}
-      {/* {isActive && <p className="accordion-content">{content}</p>} */}
     </article>
   );
 };

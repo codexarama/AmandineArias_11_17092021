@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { Link, NavLink } from 'react-router-dom';
 import logo from '../Images/logo.svg';
+import '../Styles/Menu.css'
 
 // const activeLink = () => {
-// 
+//
 // }
 
 class Menu extends React.Component {

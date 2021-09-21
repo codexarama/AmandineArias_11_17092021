@@ -1,5 +1,6 @@
 import React from 'react';
 import logoWhite from '../Images/logoWhite.svg';
+import '../Styles/Footer.css'
 
 /**
  * [Footer description]

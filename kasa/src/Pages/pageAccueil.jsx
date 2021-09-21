@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import Background from '../Images/accueilBanner.jpg'
-import Banner from './Banner';
-import Landing from './Landing';
-import Footer from './Footer';
+import Banner from '../Components/Banner';
+import Landing from '../Components/Landing';
+import Footer from '../Components/Footer';
 
 class Accueil extends React.Component {
   render() {

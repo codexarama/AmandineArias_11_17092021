@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Menu from './Menu';
-import Accueil from './pageAccueil';
-import APropos from './pageAPropos';
-import Logements from './pageLogements';
-import Erreur from './pageErreur';
+import Menu from '../Components/Menu';
+import Accueil from '../Pages/pageAccueil';
+import APropos from '../Pages/pageAPropos';
+import Logements from '../Pages/pageLogements';
+import Erreur from '../Pages/pageErreur';
 import '../App.css';
 
 class App extends React.Component {

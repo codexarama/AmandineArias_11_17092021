@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import { Link, NavLink } from 'react-router-dom';
+import '../Styles/Error.css'
 
 // CUSTOMISER LIENS //
 // const handleNavLink = () =>
