@@ -18,10 +18,11 @@ Tags: app, rental accommodation;
 
 /************ BODY ************/
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   box-sizing: border-box;
-  width: 90%;
-  max-width: 1000px;
-  margin: 25px auto;
 }
 
 body a,
@@ -47,11 +48,25 @@ body {
   font-weight: 500;
 }
 
+/************ CONTENT ************/
+
+nav,
+main,
+.banner {
+  width: 90%;
+  margin: auto;
+}
+
+main {
+  height: 100vh;
+}
+
 /************ HEADER ************/
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
@@ -91,15 +106,17 @@ nav {
 }
 
 .banner-background {
-    width: 100%;
-    height: 125px;
-    border-radius: 0.5em;
-    object-fit: cover;
-    filter: brightness(75%);
-    object-position: 0 43%;}
+  width: 100%;
+  height: 125px;
+  border-radius: 0.5em;
+  object-fit: cover;
+  filter: brightness(75%);
+  object-position: 0 43%;
+}
 
 /************ LANDING ************/
 .landing {
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,6 +129,9 @@ nav {
 
 /* FOOTER */
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -132,13 +152,46 @@ nav {
   padding-bottom: 0.5em;
 }
 
-/************ ERROR ************/
+/************ A PROPOS ************/
+.accordion {
+  margin: 1em 0;
+}
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 35px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: none;
+  border-radius: 0.5em;
+  background: #ff6060;
+  font-family: 'MONTSERRAT';
+  font-size: medium;
+  color: white;
+}
+
+.accordion-content {
+  position: relative;
+  z-index: -1;
+  width: 80%;
+  margin: -1em auto 1em;
+  padding: 2em 0.5em 0.5em;
+  display: flex;
+  border-radius: 0 0 0.5em 0.5em;
+  background: #f7f7f7;
+  color: #ff6060;
+  font-size: medium;
+}
+
+/************ ERREUR ************/
 .error {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   height: 85vh;
-  color: #FF6060;
+  color: #ff6060;
   text-align: center;
 }
 
@@ -148,7 +201,7 @@ nav {
 
 .error-number {
   font-size: 10em;
-  font-weight:800;
+  font-weight: 800;
 }
 
 .error-message {
