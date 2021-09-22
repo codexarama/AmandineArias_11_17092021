@@ -3,9 +3,6 @@ import Menu from './Menu';
 import Banner from './Banner';
 import '../Styles/Header.css'
 
-/**
- * [Header description]
- */
 
 class Header extends React.Component {
   render() {

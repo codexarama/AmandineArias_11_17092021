@@ -1,25 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../Images/logo.svg';
-import '../Styles/Menu.css'
-
-// const activeLink = () => {
-//
-// }
+import '../Styles/Menu.css';
 
 class Menu extends React.Component {
   render() {
     return (
       <nav>
-        <img className="logo" src={logo} alt="logo"></img>
+        <Link to="/">
+          <img className="logo" src={logo} alt="logo"></img>
+        </Link>
         <ul>
-          <li>
-            <Link className="nav-link" to="/">Accueil</Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/apropos">A Propos</Link>
-          </li>
+          <NavLink className="nav-link" activeClassName="active" exact to="/">
+            Accueil
+          </NavLink>
+          <NavLink className="nav-link" activeClassName="active" to="/apropos">
+            A Propos
+          </NavLink>
         </ul>
       </nav>
     );

@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 import '../Styles/Accordion.css'
 
 const Accordion = ({ id, title, content }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <article className="accordion">
       <button
         className="accordion-title"
-        onClick={() => setIsActive(!isActive)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <span>{title}</span>
         <span>
-          {isActive ? (
+          {isOpen ? (
             <i className="fas fa-chevron-up"></i>
           ) : (
             <i className="fas fa-chevron-down"></i>
           )}
         </span>
       </button>
-      {isActive && (
+      {isOpen && (
         <p key={id} className="accordion-content">
           {content}
         </p>

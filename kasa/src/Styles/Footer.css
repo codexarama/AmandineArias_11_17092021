@@ -1,23 +1,24 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100px;
-    background-color: black;
-  }
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  background-color: black;
+}
 
-  .footer-logo {
-    width: 75px;
-    padding: 1.5em 0 0.5em;
-  }
+.footer-logo {
+  width: 75px;
+  padding: 1.5em 0 0.5em;
+}
 
-  .footer-content {
-    width: 100%;
-    color: white;
-    font-size: xx-small;
-    text-align: center;
-    padding-bottom: 0.5em;
-  }
+.footer-content {
+  width: 100%;
+  color: white;
+  font-size: xx-small;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
