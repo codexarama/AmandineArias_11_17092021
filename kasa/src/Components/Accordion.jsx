@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../Styles/Accordion.css'
+import '../Styles/Accordion.css';
 
-const Accordion = ({ id, title, content }) => {
+const Accordion = ({ className, id, title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <article className="accordion">
-      <button
-        className="accordion-title"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+    <article className={className}>
+      <button className="accordion-title" onClick={() => setIsOpen(!isOpen)}>
         <span>{title}</span>
         <span>
           {isOpen ? (
@@ -20,11 +17,30 @@ const Accordion = ({ id, title, content }) => {
           )}
         </span>
       </button>
+
+      {typeof content === 'string' ? (
+        <p key={id} className="accordion-content">
+          {content}
+        </p>
+      ) : (
+        <ul className="accordion-content">
+          {content.map((item, index) => (
+            <li className="accordion-item"  key={index}>{item}</li>
+          ))}
+        </ul>
+      )}
+
+      {/* {isOpen && (
+        <ul key={id} className="accordion-content">
+          <li>{content}</li>
+        </ul>
+      )}
+
       {isOpen && (
         <p key={id} className="accordion-content">
           {content}
         </p>
-      )}
+      )} */}
     </article>
   );
 };
@@ -34,7 +50,7 @@ Accordion.propTypes = {
   content: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
-  ]).isRequired
+  ]).isRequired,
   // content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired
 };
 

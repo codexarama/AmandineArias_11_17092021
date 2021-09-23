@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import '../Styles/User.css';
 
 class User extends React.Component {
   render() {
     const { name, src } = this.props;
-    const firstName = name.split('')[0];
-    const lastName = name.split('')[1];
+    const firstName = name.split(' ')[0];
+    const lastName = name.split(' ')[1];
 
     return (
-      <section className="user">
-        <article className="user-name">
-          <p>{firstName}</p>
-          <p>{lastName}</p>
-        </article>
-        <img className="user-avatar" src={src} alt={name} />
-      </section>
+      <Fragment>
+        <div className="user-infos">
+          <p className="user-name">
+            {firstName}
+            <br />
+            {lastName}
+          </p>
+          <img className="user-avatar" src={src} alt={name} />
+        </div>
+      </Fragment>
     );
   }
 }

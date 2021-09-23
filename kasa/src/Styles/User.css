@@ -1,0 +1,18 @@
+.user-infos {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 0.5em;
+  text-align: right;
+  color: #ff6060;
+  font-size: small;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
