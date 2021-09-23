@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Menu from '../Components/Menu';
 import Accueil from '../Pages/pageAccueil';
 import APropos from '../Pages/pageAPropos';
-
 import Selection from './pageSelection';
 import Erreur from '../Pages/pageErreur';
+import Footer from '../Components/Footer';
 import '../Styles/App.css';
 
 class App extends React.Component {
@@ -21,6 +21,7 @@ class App extends React.Component {
           {/* PAGE NOT FOUND */}
           <Route component={Erreur} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     );
   }

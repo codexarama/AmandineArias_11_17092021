@@ -3,9 +3,8 @@ import Background from '../Images/aProposBanner.jpg';
 import Banner from '../Components/Banner';
 import Accordion from '../Components/Accordion';
 import { AProposData } from '../Data/AProposData';
-import Footer from '../Components/Footer';
 
-class APropos extends React.Component {
+export default class APropos extends React.Component {
   render() {
     return (
       <Fragment>
@@ -13,16 +12,14 @@ class APropos extends React.Component {
         <main>
           {AProposData.map(({ ...data }) => (
             <Accordion
+              className="accordion"
               key={data.id}
               title={data.title}
               content={data.content}
             />
           ))}
         </main>
-        <Footer />
       </Fragment>
     );
   }
 }
-
-export default APropos;

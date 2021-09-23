@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react';
 import Erreur404 from '../Components/Error';
-import Footer from '../Components/Footer';
 
 class Erreur extends React.Component {
   render() {
     return (
       <Fragment>
         <Erreur404 />
-        <Footer />
       </Fragment>
     );
   }
