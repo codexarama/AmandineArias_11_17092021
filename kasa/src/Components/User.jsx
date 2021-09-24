@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import '../Styles/User.css';
 
-class User extends React.Component {
+export default class User extends React.Component {
   render() {
     const { name, src } = this.props;
     const firstName = name.split(' ')[0];
@@ -28,4 +28,3 @@ User.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-export default User;
