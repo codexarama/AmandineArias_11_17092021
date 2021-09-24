@@ -7,7 +7,7 @@ class Tag extends React.Component {
     const { tags } = this.props;
 
     return (
-      <ul>
+      <ul className="tag-list">
         {tags.map((tag, index) => (
           <li className="tag" key={index}>{tag}</li>
         ))}
