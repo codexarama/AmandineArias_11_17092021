@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 // import React, { Fragment, useEffect } from 'react';
 import { logements } from '../Data/LogementsData';
+import Carousel from "../Components/Carousel"
 import User from '../Components/User';
 import Tag from '../Components/Tag';
 import Rating from '../Components/Rating';
@@ -17,14 +18,16 @@ class Selection extends React.Component {
 
     const urlId = this.props.match.params.id;
     const current = logements.find((data) => data.id === urlId);
-    const { title, location, tags, host, rating, description, equipments } =
+    const { pictures, title, location, tags, host, rating, description, equipments } =
       current;
 
     if (!current) return <Error />
 
     return (
       <Fragment>
-        <header>{/* CAROUSEL */}</header>
+        <header className="carousel">
+          <Carousel src={pictures}/>
+        </header>
         <main>
           <section className="selection">
             <article className="selection-infos">
@@ -48,4 +51,3 @@ class Selection extends React.Component {
 }
 
 export default Selection;
-
