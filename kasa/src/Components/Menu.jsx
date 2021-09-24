@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../Images/logo.svg';
 import '../Styles/Menu.css';
 
-class Menu extends React.Component {
+export default class Menu extends React.Component {
   render() {
     return (
       <nav>
@@ -23,4 +23,3 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;

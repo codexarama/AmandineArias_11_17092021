@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types"
 import '../Styles/Banner.css'
 
-class Banner extends React.Component {
+export default class Banner extends React.Component {
   render() {
 
     const { src, alt, title } = this.props;
@@ -26,4 +26,3 @@ Banner.propTypes = {
   title: PropTypes.string,
 };
 
-export default Banner;

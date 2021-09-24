@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../Styles/Card.css';
 
-class Card extends React.Component {
+export default class Card extends React.Component {
   render() {
     const { id, title, src } = this.props;
 
@@ -22,4 +22,3 @@ Card.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-export default Card;

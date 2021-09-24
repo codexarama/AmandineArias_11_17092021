@@ -3,7 +3,7 @@ import Card from '../Components/Card';
 import { logements } from '../Data/LogementsData';
 import '../Styles/Annonces.css';
 
-class Annonces extends React.Component {
+export default class Annonces extends React.Component {
   render() {
     return (
       <main className="annonces">
@@ -43,5 +43,3 @@ class Annonces extends React.Component {
 //   </main>
 // );
 // };
-
-export default Annonces;

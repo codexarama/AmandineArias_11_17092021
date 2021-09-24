@@ -8,7 +8,7 @@ import '../Styles/Error.css'
 // get Link elmt from DOM
 // tranform Link into NavLink
 
-class Error extends React.Component {
+export default class Error extends React.Component {
   render() {
     return (
       <main className="error">
@@ -24,5 +24,3 @@ class Error extends React.Component {
     );
   }
 }
-
-export default Error;
