@@ -18,40 +18,28 @@ const Accordion = ({ className, id, title, content }) => {
         </span>
       </button>
 
-      {typeof content === 'string' ? (
-        <p key={id} className="accordion-content">
-          {content}
-        </p>
-      ) : (
-        <ul className="accordion-content">
-          {content.map((item, index) => (
-            <li className="accordion-item"  key={index}>{item}</li>
-          ))}
-        </ul>
-      )}
-
-      {/* {isOpen && (
+      {isOpen && typeof content !== 'string' && (
         <ul key={id} className="accordion-content">
           <li>{content}</li>
         </ul>
       )}
 
-      {isOpen && (
+      {isOpen && typeof content === 'string'&& (
         <p key={id} className="accordion-content">
           {content}
         </p>
-      )} */}
+      )}
     </article>
   );
 };
 
 Accordion.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]).isRequired,
-  // content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired
+  // content: PropTypes.oneOfType([
+  //   PropTypes.string,
+  //   PropTypes.arrayOf(PropTypes.string),
+  // ]).isRequired,
+  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired
 };
 
 export default Accordion;
