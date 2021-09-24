@@ -19,12 +19,14 @@ const Accordion = ({ className, id, title, content }) => {
       </button>
 
       {isOpen && typeof content !== 'string' && (
-        <ul key={id} className="accordion-content">
-          <li>{content}</li>
+        <ul className="accordion-content">
+          {content.map((item, id) => (
+            <li key={id}>{item}</li>
+          ))}
         </ul>
       )}
 
-      {isOpen && typeof content === 'string'&& (
+      {isOpen && typeof content === 'string' && (
         <p key={id} className="accordion-content">
           {content}
         </p>
@@ -39,7 +41,7 @@ Accordion.propTypes = {
   //   PropTypes.string,
   //   PropTypes.arrayOf(PropTypes.string),
   // ]).isRequired,
-  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired
+  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]).isRequired,
 };
 
 export default Accordion;
