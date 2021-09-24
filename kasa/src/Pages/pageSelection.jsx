@@ -1,17 +1,26 @@
 import React, { Fragment } from 'react';
+// import React, { Fragment, useEffect } from 'react';
 import { logements } from '../Data/LogementsData';
 import User from '../Components/User';
 import Tag from '../Components/Tag';
 import Rating from '../Components/Rating';
 import Accordion from '../Components/Accordion';
+import Error from '../Pages/pageErreur'
 import '../Styles/Selection.css';
+
+// MODIFIE DYNAMIQUEMENT LE TITRE DE LA PAGE
+// UNIQUEMENT AVEC COMPOSANT FONCTION
+// useEffect(() => {document.title = `Kasa | Sélection`})
 
 class Selection extends React.Component {
   render() {
+
     const urlId = this.props.match.params.id;
     const current = logements.find((data) => data.id === urlId);
     const { title, location, tags, host, rating, description, equipments } =
       current;
+
+    if (!current) return <Error />
 
     return (
       <Fragment>
@@ -39,3 +48,4 @@ class Selection extends React.Component {
 }
 
 export default Selection;
+
