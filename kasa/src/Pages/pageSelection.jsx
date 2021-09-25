@@ -26,7 +26,7 @@ class Selection extends React.Component {
     return (
       <Fragment>
         <header className="carousel">
-          <Carousel src={pictures}/>
+          <Carousel src={pictures} alt={pictures.index} />
         </header>
         <main>
           <section className="selection">
