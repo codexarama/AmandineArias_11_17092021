@@ -18,6 +18,11 @@
   background: transparent;
 }
 
+.previous:hover,
+.next:hover {
+  cursor: pointer;
+}
+
 .next {
   right: 0;
 }
