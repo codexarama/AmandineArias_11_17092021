@@ -1,7 +1,7 @@
 .carousel {
-  width: 90%;
-  margin: auto;
-  height: 350px;
+  width: 70%;
+  margin: 0 auto 2em;
+  height: 415px;
 }
 
 .carousel-container {
@@ -12,7 +12,7 @@
 .previous,
 .next {
   position: absolute;
-  height: 300px;
+  height: 415px;
   width: 5em;
   border: none;
   background: transparent;
@@ -36,7 +36,7 @@
 .carousel-img {
   width: 100%;
   border-radius: 1em;
-  height: 300px;
+  height: 415px;
   object-fit: cover;
 }
 
