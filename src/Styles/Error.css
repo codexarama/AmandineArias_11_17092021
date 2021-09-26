@@ -1,0 +1,32 @@
+main {
+  justify-content: center;
+}
+
+.error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #ff6060;
+  text-align: center;
+}
+
+.error-content {
+  width: 100%;
+  height: 70vh;
+  padding-top: 7.5em;
+}
+
+.error-number {
+  font-size: 10em;
+  font-weight: 800;
+}
+
+.error-message {
+  font-size: x-large;
+}
+
+.error-back {
+  width: 28%;
+  font-size: x-small;
+  border-bottom: solid 2px #ff6060;
+}

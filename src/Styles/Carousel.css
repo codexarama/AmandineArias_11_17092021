@@ -1,0 +1,49 @@
+.carousel {
+  width: 90%;
+  margin: auto;
+  height: 350px;
+}
+
+.carousel-container {
+  display: flex;
+  position: relative;
+}
+
+.previous,
+.next {
+  position: absolute;
+  height: 300px;
+  width: 5em;
+  border: none;
+  background: transparent;
+}
+
+.previous:hover,
+.next:hover {
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+}
+
+.previous i,
+.next i {
+  color: white;
+  font-size: xxx-large;
+}
+
+.carousel-img {
+  width: 100%;
+  border-radius: 1em;
+  height: 300px;
+  object-fit: cover;
+}
+
+.counter {
+  position: absolute;
+  width: 100%;
+  bottom: 1em;
+  text-align: center;
+  color: white;
+}
