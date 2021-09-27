@@ -32,4 +32,3 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 - [maquette UI](https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A1)
 - [coding guidelines](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa.pdf)
 - [base de données](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json)
-
