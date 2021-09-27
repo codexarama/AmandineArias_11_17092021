@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { Link, NavLink } from 'react-router-dom';
 import '../Styles/Error.css'
-
-// CUSTOMISER LIENS //
-// const handleNavLink = () =>
-// get Link elmt from DOM
-// tranform Link into NavLink
 
 export default class Error extends React.Component {
   render() {
@@ -19,7 +13,6 @@ export default class Error extends React.Component {
           </p>
         </div>
         <Link className="nav-link error-back" to="/">Retourner sur la page d’accueil</Link>
-        {/* <Link onClick={handleNavLink} className="nav-link error-back" to="/">Retourner sur la page d’accueil</Link> */}
       </main>
     );
   }

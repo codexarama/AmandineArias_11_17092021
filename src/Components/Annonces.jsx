@@ -30,14 +30,3 @@ export default class Annonces extends React.Component {
     );
   }
 }
-
-// STATELESS COMPONENT (FUNCTION)
-// const Landing = () => {
-//  return (
-//   <main className="landing">
-//     <div>1</div>
-//     <div>2</div>
-//     <div>3</div>
-//   </main>
-//  );
-// };
