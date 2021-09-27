@@ -10,14 +10,22 @@ export default class APropos extends React.Component {
       <Fragment>
         <Banner src={Background} alt="Paysage" title="Nos valeurs" />
         <main>
-          {AProposData.map(({ ...data }) => (
+          {AProposData.map(({ id, title, content }) => (
+            <Accordion
+              className="accordion"
+              key={id}
+              title={title}
+              content={content}
+            />
+          ))}
+          {/* {AProposData.map(({ ...data }) => (
             <Accordion
               className="accordion"
               key={data.id}
               title={data.title}
               content={data.content}
             />
-          ))}
+          ))} */}
         </main>
       </Fragment>
     );

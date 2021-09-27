@@ -14,14 +14,3 @@ export default class Header extends React.Component {
     );
   }
 }
-
-// STATELESS COMPONENT (FONCTION)
-// const Header = () => {
-//   return (
-//     <header>
-//       < Menu />
-//       < Banner />
-//     </header>
-//   );
-// };
-

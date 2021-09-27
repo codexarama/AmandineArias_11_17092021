@@ -12,13 +12,3 @@ export default class Footer extends React.Component {
     );
   }
 }
-
-// STATELESS COMPONENT (FONCTION)
-// const Footer = () => {
-//   return (
-//     <footer className="footer">
-//         <img className="footer-logo" src={logoWhite} alt="logo"></img>
-//         <p className="footer-content">Chez vous, partout et ailleurs</p>
-//     </footer>
-//   );
-// };
