@@ -27,10 +27,9 @@
   right: 0;
 }
 
-.previous i,
-.next i {
-  color: white;
-  font-size: xxx-large;
+.previous-icon,
+.next-icon {
+  filter:drop-shadow(0 0 0.25em gray)
 }
 
 .carousel-img {
@@ -46,4 +45,5 @@
   bottom: 1em;
   text-align: center;
   color: white;
+  text-shadow: 1px 1px 2.5px grey;
 }

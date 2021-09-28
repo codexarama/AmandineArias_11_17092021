@@ -6,7 +6,12 @@ import APropos from '../Pages/pageAPropos';
 import Selection from '../Pages/pageSelection';
 import Erreur from '../Pages/pageErreur';
 import Footer from '../Components/Footer';
-import '../Styles/App.css';
+import './App.css';
+
+/**
+ * Render App component
+ * @returns {Reactnode} jsx in DOM html
+ */
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +21,10 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Accueil} />
           <Route path="/apropos" component={APropos} />
-          <Route path="/selection/:id" render={(props) => <Selection {...props} /> } />
+          <Route
+            path="/selection/:id"
+            render={(props) => <Selection {...props} />}
+          />
 
           {/* PAGE NOT FOUND */}
           <Route component={Erreur} />

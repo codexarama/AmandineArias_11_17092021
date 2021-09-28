@@ -3,6 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../Images/logo.svg';
 import '../Styles/Menu.css';
 
+/**
+ * Render Menu component
+ * @returns {Reactnode} jsx in DOM html
+ */
+
 export default class Menu extends React.Component {
   render() {
     return (
