@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../Styles/Rating.css';
 
+/**
+ * Render Rating component
+ * @extends Component
+ * @param {object} props
+ * @param {integer} props.rating > number of stars
+ * @returns {Reactnode} jsx in DOM html
+*/
+
 export default class Rating extends Component {
   render() {
     const { rating } = this.props;

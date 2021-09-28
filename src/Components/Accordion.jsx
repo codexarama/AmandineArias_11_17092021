@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import '../Styles/Accordion.css';
+
+/**
+ * Render Accordion component
+ * @extends Component
+ * @param {object} props
+ * @param {string} props.title > item title
+ * @param {string} props.content > item content
+ * @param {boolean} props.isOpen > get item state (open/close)
+ * @param {function} props.showContent > handle content toggle render (show/hide) by clicking on button
+ * @returns {Reactnode} jsx injected in DOM
+ */
 
 export default class Accordion extends Component {
   constructor(props) {

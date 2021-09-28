@@ -4,15 +4,29 @@ import next from '../Images/next.svg';
 import '../Styles/Carousel.css';
 import { Fragment } from 'react/cjs/react.production.min';
 
+/**
+ * Render Carousel component
+ * @extends Component
+ * @param {object} props
+ * @param {Array} props.src > display picture from data
+ * @property {object} state > get the index of the current picture
+ * @property {integer} handle navigation between slides from current index
+ * @property {string} props.alt > update alt text
+ * @returns {Reactnode} jsx injected in DOM
+ */
+
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = { currentImg: 0 };
   }
 
-  // si i = 0 (première image de la liste)
-  // alors i - 1 = i.length - 1 (dernière image de la liste)
-  // sinon i - 1
+  /**
+   * handle click on PREVIOUS BUTTON
+   * if currentImg is the first one, nav to the last one.
+   * else nav to the previous one
+   */
+
   previousImg = () => {
     const index = this.state.currentImg;
     index === 0
@@ -20,9 +34,12 @@ export default class Carousel extends Component {
       : this.setState({ currentImg: index - 1 });
   };
 
-  // si i = i.length - 1 (dernière image de la liste)
-  // alors i + 1 = 0 (première image de la liste)
-  // sinon i + 1
+  /**
+   * handle click on NEXT BUTTON
+   * if currentImg is the last one, nav to the first one
+   * else nav to the next one
+   */
+
   nextImg = () => {
     const index = this.state.currentImg;
     index === this.props.src.length - 1
@@ -33,6 +50,11 @@ export default class Carousel extends Component {
   render() {
     let currentImg = this.state.currentImg;
     let { src, alt } = this.props;
+
+    /**
+     * if only one media in the array
+     * no render for previous & next button
+     */
 
     return (
       <div className="carousel-container">

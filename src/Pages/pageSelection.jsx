@@ -13,6 +13,16 @@ import '../Styles/Selection.css';
 // UNIQUEMENT AVEC COMPOSANT FONCTION
 // useEffect(() => {document.title = `Kasa | Sélection`})
 
+/**
+ * Render "Selection" page
+ * @extends Component
+ * @param {object} props
+ * @param {string} props.match.parmas.id > get selection id by matching with url id
+ * @property {string} urlId > get selection id from props
+ * @property {object} current > data matching with selection
+ * @returns {Reactnode} jsx in DOM html
+*/
+
 export default class Selection extends React.Component {
   render() {
 
@@ -26,7 +36,7 @@ export default class Selection extends React.Component {
     return (
       <Fragment>
         <header className="carousel">
-          <Carousel src={pictures} alt={pictures.index} />
+          <Carousel src={pictures} alt={title} />
         </header>
         <main>
           <section className="selection">

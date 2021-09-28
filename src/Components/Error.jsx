@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/Error.css'
+import '../Styles/Error.css';
+
+/**
+ * Render Error component
+ * @extends Component
+ * @returns {Reactnode} jsx injected in DOM
+ */
 
 export default class Error extends React.Component {
   render() {
@@ -12,7 +18,9 @@ export default class Error extends React.Component {
             Oups ! La page que vous demandez n'existe pas.
           </p>
         </div>
-        <Link className="nav-link error-back" to="/">Retourner sur la page d’accueil</Link>
+        <Link className="nav-link error-back" to="/">
+          Retourner sur la page d’accueil
+        </Link>
       </main>
     );
   }
