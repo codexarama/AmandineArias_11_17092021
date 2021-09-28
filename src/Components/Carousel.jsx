@@ -1,35 +1,64 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import previous from '../Images/previous.svg';
+import next from '../Images/next.svg';
 import '../Styles/Carousel.css';
+import { Fragment } from 'react/cjs/react.production.min';
 
-const Carousel = ({ src, alt }) => {
-  const [currentImg, setCurrentImg] = useState(0);
+export default class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { currentImg: 0 };
+  }
 
-  const previousImg = () => {
-    currentImg > 0 && setCurrentImg(currentImg - 1);
+  // si i = 0 (première image de la liste)
+  // alors i - 1 = i.length - 1 (dernière image de la liste)
+  // sinon i - 1
+  previousImg = () => {
+    const index = this.state.currentImg;
+    index === 0
+      ? this.setState({ currentImg: this.props.src.length - 1 })
+      : this.setState({ currentImg: index - 1 });
   };
 
-  const nextImg = () => {
-    currentImg < src.length - 1 && setCurrentImg(currentImg + 1);
+  // si i = i.length - 1 (dernière image de la liste)
+  // alors i + 1 = 0 (première image de la liste)
+  // sinon i + 1
+  nextImg = () => {
+    const index = this.state.currentImg;
+    index === this.props.src.length - 1
+      ? this.setState({ currentImg: 0 })
+      : this.setState({ currentImg: index + 1 });
   };
 
-  return (
-    <div className="carousel-container">
-        <button className="previous" onClick={previousImg}>
-          <i className="fas fa-chevron-left"></i>
-        </button>
+  render() {
+    let currentImg = this.state.currentImg;
+    let { src, alt } = this.props;
+
+    return (
+      <div className="carousel-container">
+        {src.length > 1 && (
+          <Fragment>
+            <button className="previous" onClick={this.previousImg}>
+              <img
+                className="previous-icon"
+                src={previous}
+                alt="chevron-left"
+              />
+            </button>
+            <button className="next" onClick={this.nextImg}>
+              <img className="next-icon" src={next} alt="chevron-right" />
+            </button>
+            <span className="counter">
+              {this.state.currentImg + 1} / {src.length}
+            </span>
+          </Fragment>
+        )}
         <img
-        className="carousel-img"
-        src={src[currentImg]}
-        alt={`${alt} ${currentImg + 1}`}
-      />
-        <button className="next" onClick={nextImg}>
-          <i className="fas fa-chevron-right"></i>
-        </button>
-      <span className="counter">
-          {currentImg + 1} / {src.length}
-        </span>
-    </div>
-  );
-};
-
-export default Carousel;
+          className={'carousel-img'}
+          src={src[currentImg]}
+          alt={`${alt} ${currentImg + 1}`}
+        />
+      </div>
+    );
+  }
+}
