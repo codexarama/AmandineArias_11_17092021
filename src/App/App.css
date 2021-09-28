@@ -63,8 +63,7 @@ main {
   main,
   nav,
   .banner,
-  .carousel,
-  .accordion {
+  .carousel {
     width: 70%;
   }
 
@@ -78,8 +77,7 @@ main {
   main,
   nav,
   .banner,
-  .carousel,
-  .accordion {
+  .carousel {
     width: 90%;
   }
 
@@ -102,10 +100,12 @@ main {
 }
 
 @media screen and (max-width: 680px) {
+  /* BANNIERE */
   .banner-title {
     font-size: larger;
   }
 
+  /* ANNONCES */
   .annonces {
     padding: 0;
     background: transparent;
@@ -118,5 +118,57 @@ main {
   .card,
   .card-background {
     width: 100%;
+  }
+
+  /* GALLERY */
+  .carousel,
+  .carousel-img {
+    height: 300px;
+  }
+
+  .selection {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .selection-infos {
+    max-width: 100%;
+  }
+
+  .tag-list {
+    margin-top: 0;
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 1em;
+  }
+
+  .infos {
+    display: block;
+    margin-top: 0;
+  }
+
+  .infos-descriptif,
+  .infos-equipements {
+    margin: 1em 0 0;
+  }
+
+  /* A PROPOS */
+  .accordion {
+    width: 100%;
+  }
+
+  /* ERREUR */
+  .error-number {
+    font-size: 8em;
+  }
+
+  .error-message {
+    font-size: medium;
+    width: 50%;
+    margin: auto;
   }
 }
