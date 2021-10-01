@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 // import React, { Fragment, useEffect } from 'react';
 import { logements } from '../Data/LogementsData';
-import Carousel from "../Components/Carousel"
+import Carousel from '../Components/Carousel';
 import User from '../Components/User';
 import Tag from '../Components/Tag';
 import Rating from '../Components/Rating';
 import Accordion from '../Components/Accordion';
-import Error from '../Pages/pageErreur'
+import Error from '../Pages/pageErreur';
 import '../Styles/Selection.css';
 
 // MODIFIER DYNAMIQUEMENT LE TITRE DE LA PAGE
@@ -21,17 +21,24 @@ import '../Styles/Selection.css';
  * @property {string} urlId > get selection id from props
  * @property {object} current > data matching with selection
  * @returns {Reactnode} jsx in DOM html
-*/
+ */
 
 export default class Selection extends React.Component {
   render() {
-
     const urlId = this.props.match.params.id;
     const current = logements.find((data) => data.id === urlId);
-    const { pictures, title, location, tags, host, rating, description, equipments } =
-      current;
+    const {
+      pictures,
+      title,
+      location,
+      tags,
+      host,
+      rating,
+      description,
+      equipments,
+    } = current || [];
 
-    if (!current) return <Error />
+    if (!current) return <Error />;
 
     return (
       <Fragment>
@@ -51,8 +58,16 @@ export default class Selection extends React.Component {
             </article>
           </section>
           <section className="infos">
-            <Accordion className="infos-descriptif" title="Description" content={description} />
-            <Accordion className="infos-equipements" title="Equipements" content={equipments} />
+            <Accordion
+              className="infos-descriptif"
+              title="Description"
+              content={description}
+            />
+            <Accordion
+              className="infos-equipements"
+              title="Equipements"
+              content={equipments}
+            />
           </section>
         </main>
       </Fragment>
