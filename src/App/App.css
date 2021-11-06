@@ -59,20 +59,6 @@ main {
 }
 
 /************ RESPONSIVE ************/
-@media screen and (min-width: 1440px) {
-  main,
-  nav,
-  .banner,
-  .carousel {
-    width: 70%;
-  }
-
-  nav a,
-  nav ul {
-    margin: 0;
-  }
-}
-
 @media screen and (max-width: 1440px) {
   main,
   nav,
@@ -87,11 +73,7 @@ main {
   }
 
   .card {
-    margin: 2em 0 2em;
-  }
-
-  .card {
-    width: 30%;
+    margin: 2em;
   }
 
   .card-background {
@@ -99,7 +81,7 @@ main {
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
   /* BANNIERE */
   .banner-title {
     font-size: larger;
@@ -111,13 +93,13 @@ main {
     background: transparent;
   }
 
-  .card {
-    margin: 0 0 1em;
-  }
-
   .card,
   .card-background {
     width: 100%;
+  }
+
+  .card {
+    margin: 1em 0;
   }
 
   /* GALLERY */
