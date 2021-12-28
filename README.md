@@ -1,6 +1,6 @@
 # Kasa
 
-(projet fictif de formation n°08/12 avec OpenClassrooms)
+    Projet fictif de formation n°08/11 | OpenClassrooms
 
 > PROBLEMATIQUE
 
