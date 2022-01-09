@@ -2,6 +2,10 @@
 
     Projet fictif de formation n°08/11 | OpenClassrooms
 
+**Selected appartment**
+
+<kbd>![slected appartment](./Kasa.png)</kbd>
+
 > PROBLEMATIQUE
 
 Le site de Kasa, plateforme de location de logements entre particuliers (plus de 500 annonces postées par jour), a été codé il y a plus de 10 ans en ASP.NET avec un code legacy important.
