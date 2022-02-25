@@ -12,7 +12,7 @@
 .previous,
 .next {
   position: absolute;
-  height: 415px;
+  height: 100%;
   width: 5em;
   border: none;
   background: transparent;
